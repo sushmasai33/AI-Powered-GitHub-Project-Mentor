@@ -31,7 +31,7 @@ class AIService:
                     "temperature": temperature,
                     "max_tokens": 1024
                 }
-                with httpx.Client(timeout=10.0) as client:
+                with httpx.Client(timeout=30.0) as client:
                     resp = client.post(
                         "https://integrate.api.nvidia.com/v1/chat/completions",
                         headers=headers,
